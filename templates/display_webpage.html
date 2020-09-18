@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpages</title>
+</head>
+<body>
+    <h2>Webpages Are : </h2>
+    <table border="2pt">
+        <tr>
+            <th>Webpage_ID</th>
+            <th>Webpage_Topic</th>
+            <th>Webpage_Name</th>
+            <th>Webpage_URL</th>
+        </tr>
+        {% if webpages %}
+        {% for w in webpages %}
+        <tr>
+            <td>{{w.id}}</td>
+            <td>{{w.topic.Topic_name}}</td>
+            <td>{{w.name}}</td>
+            <td>{{w.url}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+    
+</body>
+</html>
